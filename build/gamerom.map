@@ -1,0 +1,22 @@
+ROM0 bank #0:
+  SECTION: $0100-$014f ($0050 bytes) ["Header"]
+  SECTION: $0150-$01a3 ($0054 bytes) ["Game"]
+           $0150 = Game
+           $0150 = WaitVBlank
+           $0182 = !0
+           $0194 = !1
+           $01a2 = WaitVBlank.gameloop
+  SECTION: $01a4-$05a3 ($0400 bytes) ["BG BG_Tilemap"]
+           $01a4 = BG_Tilemap
+           $05a4 = BG_TilemapEnd
+  SECTION: $05a4-$0823 ($0280 bytes) ["BG Tiles"]
+           $05a4 = BG_Tiles
+           $0824 = BG_TilesEnd
+  SECTION: $1000-$100b ($000c bytes) ["Helper Routines"]
+           $1000 = fill
+           $1004 = fill.fill
+           $1005 = fill.skip
+    SLACK: $38d0 bytes
+
+USED:
+    ROM0: $0730 bytes in 1 bank
