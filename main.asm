@@ -17,7 +17,7 @@ Game:
 .WaitVBlank:
 	ld a, [rLY]
 	cp 144
-	jp c, WaitVBlank
+	jp c, .WaitVBlank
 
     ;reset important registers
 	xor	a
