@@ -14,7 +14,7 @@ SECTION "Game",rom0[$150]
 
 Game:
 
-WaitVBlank:
+.WaitVBlank:
 	ld a, [rLY]
 	cp 144
 	jp c, WaitVBlank
