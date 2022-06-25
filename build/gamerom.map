@@ -1,4 +1,8 @@
 ROM0 bank #0:
+  SECTION: $0000-$000b ($000c bytes) ["Helper Routines"]
+           $0000 = fill
+           $0004 = fill.fill
+           $0005 = fill.skip
   SECTION: $0100-$014f ($0050 bytes) ["Header"]
   SECTION: $0150-$01a3 ($0054 bytes) ["Game"]
            $0150 = Game
@@ -12,10 +16,6 @@ ROM0 bank #0:
   SECTION: $05a4-$0823 ($0280 bytes) ["BG Tiles"]
            $05a4 = BG_Tiles
            $0824 = BG_TilesEnd
-  SECTION: $1000-$100b ($000c bytes) ["Helper Routines"]
-           $1000 = fill
-           $1004 = fill.fill
-           $1005 = fill.skip
     SLACK: $38d0 bytes
 
 USED:

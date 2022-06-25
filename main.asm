@@ -13,8 +13,7 @@ SECTION "Header",ROM0[$100]
 SECTION "Game",rom0[$150]
 
 Game:
-    ; ld sp, $E100
-    
+
 WaitVBlank:
 	ld a, [rLY]
 	cp 144
@@ -63,14 +62,14 @@ WaitVBlank:
 	jp nz, :-
 
 	; Turn the LCD on
-	ld a, LCDCF_ON | LCDCF_BGON ; | LCDCF_OBJON
+	ld a, LCDCF_ON | LCDCF_BGON
 	ld [rLCDC], a
 
 .gameloop:
     jr .gameloop
 
 
-SECTION "Helper Routines",ROM0[$1000]
+SECTION "Helper Routines",ROM0
 
 ;-------------------------------------------------------------------------------
 fill::
